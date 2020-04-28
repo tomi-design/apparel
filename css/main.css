@@ -332,6 +332,10 @@ footer a:visited {
 
 @media only screen and (min-width: 1200px) {
 
+  main {
+    height:100%;
+  }
+  
   main .content-wrapper {
     display: flex;
     flex-direction: row-reverse;
