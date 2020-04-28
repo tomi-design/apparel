@@ -110,17 +110,29 @@ p {
   font-family: 'Josefin Sans', sans-serif;
 }
 
+header {
+  padding-top: 5px;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 main .content-wrapper {
   width: 100%;
   margin: 0 auto;
 }
 
-main {
+.hero {
+  background: url('../img/mobile.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 250px;
   width: 100%;
-}
-
-header {
-  padding-top: 5px;
 }
 
 .hero img {
@@ -178,6 +190,18 @@ header {
   margin: auto;
 }
 
+.email {
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0 0 0 2em;
+  font-size: 16px;
+  transition: 0.4s;
+  font-family: 'Josefin Sans', sans-serif;
+  color: hsl(0, 36%, 70%);
+  line-height: 50px;
+}
+
 .submit-button {
   height: 40px;
   display: flex;
@@ -192,18 +216,6 @@ header {
   text-decoration: none;
   font-size: 20px;
   box-shadow: 3px 10px 10px rgb(250, 224, 228);
-}
-
-.email {
-  border: none;
-  background: none;
-  outline: none;
-  padding: 0 0 0 2em;
-  font-size: 16px;
-  transition: 0.4s;
-  font-family: 'Josefin Sans', sans-serif;
-  color: hsl(0, 36%, 70%);
-  line-height: 50px;
 }
 
 footer {
@@ -226,22 +238,6 @@ footer a:visited {
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -334,8 +330,72 @@ footer a:visited {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+@media only screen and (min-width: 1200px) {
+
+  main .content-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    height: 100%;
+  }
+
+  header {
+    display: none;
+  }
+
+  .hero {
+    background: url('../img/desktop.jpg');
+    background-size: cover;
+    height: 100%;
+  }
+
+  .announcement {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .announcement .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 60%;
+    padding-bottom: 100px;
+  }
+
+  .announcement h1 {
+    text-align: left;
+    margin-top: 0;
+    font-size: 60px;
+  }
+
+  .announcement p {
+    text-align: left;
+  }
+
+  .logo-wrapper {
+    margin: 0;
+    width: 60%;
+    padding-bottom: 130px;
+  }
+
+  .logo {
+    background-image: url('../img/logo.svg');
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 100%;
+    margin-top: 50px;
+  }
+
+  .button {
+    margin: 0;
+  }
+
+
+
+
+
 }
 
 @media print,
